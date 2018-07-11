@@ -2,6 +2,7 @@
 
 # Workspace
 
+## Sourcing ROS
 ```
 # Make sure you've added the system-wide ROS setup script to .bashrc file
 # If you haven't done that, do it now, or source the file by hand
@@ -9,17 +10,27 @@
 souce /opt/ros/kinetic/setup.bash
 ```
 
+## Creating a new workspace
+
+### STEP 1: Create a new workspace folder
 ```
-# Create a new workspace
-
-# STEP 1: Create a new workspace folder, e.g. telebot_ws
+# Create a new workspace folder, e.g. telebot_ws
 mkdir -p /telebot_ws/src
+```
+### STEP 2: Initialize the workspace
+```
+# Enter the src directory
 cd telebot_ws/src
-catkin_init_workspace
 
-# STEP 2: Create the catkin workspace files
+# Use catkin to initialize workspace
+catkin_init_workspace
+```
+
+### STEP 3: Generate the catkin workspace files
+```
+# Generate the catkin workspace files
 cd ../telebot_ws
-catking_make
+catkin_make
 ```
 
 # Packages
